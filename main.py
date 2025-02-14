@@ -5,7 +5,7 @@
 # Import the pygame and system modules
 import pygame
 import sys
-
+import config
 # --- Constants --- #
 
 SCREEN_WIDTH = 800
@@ -37,9 +37,18 @@ while running:
 
     # --- Game Logic --- #
     # --- Draw --- #
-    screen.fill(WHITE)
+    screen.fill(config.DARKMODE)
 
     # This is where you draw game objects:
+    pygame.draw.line(screen, config.RED, (80, 70), (140, 70), 5)
+    pygame.draw.line(screen, config.RED, (110, 70), (110, 130), 5)
+    pygame.draw.line(screen, config.RED, (110, 130), (80, 130), 5)
+    pygame.draw.line(screen, config.RED, (80, 130), (80, 100), 5)
+    pygame.draw.line(screen, config.RED, (150, 70), (180, 70), 5)
+    pygame.draw.line(screen, config.RED, (180, 70), (180, 90), 5)
+    pygame.draw.line(screen, config.RED, (180, 90), (150, 90), 5)
+    pygame.draw.line(screen, config.RED, (150, 90), (150, 130), 5)
+    pygame.draw.line(screen, config.RED, (150, 90), (150, 70), 5)
 
     pygame.display.flip() # updateing the display
 
